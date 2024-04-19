@@ -97,3 +97,4 @@ urllib3==2.2.1
 watchdog==4.0.0
 Werkzeug==3.0.2
 wrapt==1.16.0
+opencv-python-headless
