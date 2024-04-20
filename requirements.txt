@@ -7,7 +7,6 @@ attrs==23.2.0
 audioread==3.0.1
 av==11.0.0
 blinker==1.7.0
-pathlib
 cachetools==5.3.3
 certifi==2024.2.2
 cffi==1.16.0
@@ -63,7 +62,6 @@ pyarrow==15.0.2
 pycparser==2.22
 pydeck==0.8.1b0
 pydub==0.25.1
-tempfile
 pyee==11.1.0
 Pygments==2.17.2
 pylibsrtp==0.10.0
