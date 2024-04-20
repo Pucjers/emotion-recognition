@@ -62,8 +62,14 @@ def process_audio(video_path, total_length=300000, frame_length=2048, hop_length
     rms = []
     zcr = []
     mfcc = []
-
-    _, sr = librosa.load(path = video_path, sr = None)
+    uploaded_files = st.file_uploader(
+    video_path, accept_multiple_files=True
+    )
+    with TemporaryDirectory() as temp_dir:
+        temp_file_path = Path(temp_dir, uploaded_files.name)
+        temp_file_path.write_bytes(uploaded_file.read())
+        _, sr = rosa.load(temp_file_path, sr=None)
+    #_, sr = librosa.load(path = video_path, sr = None)
     rawsound = AudioSegment.from_file(video_path)
     normalizedsound = effects.normalize(rawsound, headroom = 0)
     normal_x = np.array(normalizedsound.get_array_of_samples(), dtype = 'float32')
