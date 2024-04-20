@@ -62,6 +62,7 @@ pyarrow==15.0.2
 pycparser==2.22
 pydeck==0.8.1b0
 pydub==0.25.1
+tempfile
 pyee==11.1.0
 Pygments==2.17.2
 pylibsrtp==0.10.0
