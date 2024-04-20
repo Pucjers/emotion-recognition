@@ -7,6 +7,7 @@ attrs==23.2.0
 audioread==3.0.1
 av==11.0.0
 blinker==1.7.0
+pathlib
 cachetools==5.3.3
 certifi==2024.2.2
 cffi==1.16.0
