@@ -62,11 +62,11 @@ def process_audio(video_path, total_length=300000, frame_length=2048, hop_length
     rms = []
     zcr = []
     mfcc = []
-    uploaded_files = st.file_uploader(
-    video_path, accept_multiple_files=True
+    uploaded_file = st.file_uploader(
+    video_path, accept_multiple_files=False
     )
     with TemporaryDirectory() as temp_dir:
-        temp_file_path = Path(temp_dir, uploaded_files.name)
+        temp_file_path = Path(temp_dir, uploaded_file.name)
         temp_file_path.write_bytes(uploaded_file.read())
         _, sr = rosa.load(temp_file_path, sr=None)
     #_, sr = librosa.load(path = video_path, sr = None)
